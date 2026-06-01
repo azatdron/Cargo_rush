@@ -1,4 +1,4 @@
-Cargo Rush v4.2 Clean Garage Align
-Base: v4/v4.1 design
-Fixes: removed top logo overlay, hidden old Orders button, single timer, no floating +10, blue POEHALI button in reward panel, aligned garage car cards, new bottom nav.
+Cargo Rush v4.3 Stable Clean Fix
+Base: cargo_rush_v04_2_clean_garage_align(1).zip
+Fixes: removed top balance duplicate zeros, covered old Orders button, removed floating +10, corrected timer/button positions, aligned blue/yellow garage trucks.
 Upload index.html to GitHub root; Vercel updates automatically.
