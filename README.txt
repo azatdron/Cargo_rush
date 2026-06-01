@@ -1,7 +1,1 @@
-Cargo Rush v03 render match
-
-Загрузить в GitHub нужно файлы из этой папки:
-- index.html
-- папку assets
-
-Главный файл сайта: index.html
+Cargo Rush v04. Один файл index.html. Папка assets не нужна. Загрузите index.html в GitHub вместо старого файла.
