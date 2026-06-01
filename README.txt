@@ -1,17 +1,8 @@
-Cargo Rush v0.1
+Cargo Rush v0.2 Cartoon
 
-Первый прототип Telegram Mini App / mobile web game.
-Открой index.html в браузере.
+1. Upload index.html to GitHub repository root.
+2. Enable GitHub Pages: Settings -> Pages -> Deploy from branch -> main -> /root.
+3. Open: https://azatdron.github.io/Cargo_rush/
+4. On iPhone Safari: Share -> Add to Home Screen.
 
-Функции:
-- главный экран без emoji
-- мультяшная машина
-- кнопка ПОЕХАЛИ
-- таймер 30 минут
-- прогресс-бар
-- начисление Cargo Coin
-- лидеры недели
-- автосалон
-- гараж
-- рефералы
-- сохранение прогресса в localStorage
+This is a mobile prototype. No backend, no payments, no NFT yet.
