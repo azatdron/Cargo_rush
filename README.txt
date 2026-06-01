@@ -1,1 +1,1 @@
-Cargo Rush v04. Один файл index.html. Папка assets не нужна. Загрузите index.html в GitHub вместо старого файла.
+Cargo Rush v05 clean main screen. Single-file build: upload index.html only.
