@@ -1,75 +1,77 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="theme-color" content="#4aa8ff" />
-<title>Cargo Rush</title>
-<style>
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0;width:100%;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter",Arial,sans-serif;background:#14294a;color:#10213d}body{display:flex;justify-content:center}.app{width:min(430px,100vw);min-height:100svh;background:linear-gradient(#42a6ff 0 33%,#b7e68f 72%,#17365b 72%);position:relative;overflow:hidden;padding:16px 10px 96px}.top{display:grid;grid-template-columns:1.2fr 1fr .9fr 54px;gap:9px;align-items:center}.pill{height:58px;border-radius:15px;background:linear-gradient(#fff,#eef6ff);border:2px solid rgba(30,77,133,.18);box-shadow:0 4px 0 rgba(43,92,150,.25),0 8px 18px rgba(0,0,0,.12);display:flex;align-items:center;padding:7px 9px;gap:9px;font-weight:900}.avatar{width:43px;height:43px;border-radius:11px;background:#94d9ff;position:relative;overflow:hidden;border:2px solid #377cd2}.avatar:before{content:"";position:absolute;width:22px;height:22px;border-radius:50%;background:#ffd3a2;left:10px;top:10px}.avatar:after{content:"";position:absolute;width:30px;height:13px;background:#8c491e;left:6px;top:4px;border-radius:11px 11px 6px 6px}.name{font-size:15px;line-height:1.05}.lv{display:inline-block;margin-top:4px;background:#64bd45;color:white;border-radius:6px;padding:2px 7px;font-size:12px}.coin,.gem{justify-content:center;font-size:21px}.roundIcon{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 -3px 0 rgba(0,0,0,.14)}.gold{background:linear-gradient(#ffe25c,#f39e1e);border:3px solid #c78317;color:#7b5312}.diamond{background:linear-gradient(135deg,#7ef3ff,#2f8ef3);clip-path:polygon(50% 0,95% 34%,73% 100%,27% 100%,5% 34%)}.plus{margin-left:auto;width:24px;height:24px;border-radius:8px;background:#59bb44;color:white;display:grid;place-items:center;font-size:20px;line-height:1;box-shadow:inset 0 -2px 0 rgba(0,0,0,.18)}.gear{justify-content:center;font-size:26px;color:#657185}.gear svg{width:31px}.cloud{position:absolute;background:white;border-radius:30px;opacity:.92}.cloud:before,.cloud:after{content:"";position:absolute;background:white;border-radius:50%}.c1{width:78px;height:26px;top:164px;left:38px}.c1:before{width:38px;height:38px;left:12px;top:-20px}.c1:after{width:32px;height:32px;left:40px;top:-14px}.c2{width:72px;height:22px;top:205px;right:17px}.c2:before{width:30px;height:30px;left:10px;top:-16px}.c2:after{width:35px;height:35px;left:35px;top:-20px}.c3{width:55px;height:16px;top:84px;right:86px}.c3:before{width:24px;height:24px;left:9px;top:-11px}.truckCard{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;align-items:start}.truckInfo{width:205px;background:linear-gradient(#fff8e9,#fff3d8);border-radius:18px;border:2px solid rgba(138,109,78,.28);box-shadow:0 4px 0 rgba(82,83,87,.22);padding:9px;display:grid;grid-template-columns:83px 1fr;gap:10px;z-index:2}.smallTruck{height:83px;border-radius:12px;background:#dff1ff;position:relative;overflow:hidden;border:1px solid #d4d7d9}.smallTruck:before{content:"";position:absolute;width:45px;height:38px;background:#f8f8ee;left:8px;top:24px;border:2px solid #263443;border-radius:4px}.smallTruck:after{content:"";position:absolute;width:22px;height:29px;background:#f1f1e9;left:54px;top:33px;border:2px solid #263443;border-radius:5px 8px 4px 4px}.wheel,.wheel2{position:absolute;width:16px;height:16px;border-radius:50%;background:#1d2735;border:4px solid #8790a0;bottom:13px}.wheel{left:24px}.wheel2{left:59px}.truckInfo h2{margin:7px 0 6px;font-size:23px;line-height:1}.badge{display:inline-block;background:#3f99ee;color:white;border-radius:6px;padding:4px 8px;font-weight:900;font-size:14px}.statLine{font-size:14px;margin-top:8px;color:#233b5b}.orderBtn{justify-self:end;margin-top:10px;width:154px;height:62px;background:linear-gradient(#ffe982,#ffc93e);border:2px solid #c98c1f;border-radius:14px;box-shadow:0 4px 0 #b67920;display:flex;align-items:center;justify-content:center;gap:10px;font-size:21px;font-weight:900;position:relative}.clipboard{width:31px;height:37px;background:#fff;border:2px solid #895a2c;border-radius:5px;position:relative}.clipboard:before{content:"";position:absolute;width:16px;height:8px;background:#e8e8e8;border:2px solid #895a2c;top:-8px;left:5px;border-radius:3px}.clipboard i{display:block;height:3px;background:#5d6b7d;margin:8px 5px 0;border-radius:2px}.note{position:absolute;right:-8px;top:-14px;width:32px;height:32px;border-radius:50%;background:#f15a3d;color:white;display:grid;place-items:center;border:2px solid #c43b27;font-size:16px}.scene{height:320px;margin:5px -10px 0;position:relative;overflow:hidden}.sun{position:absolute;width:70px;height:70px;background:#ffef82;border-radius:50%;right:57px;top:50px}.hill{position:absolute;bottom:55px;width:125%;height:165px;background:#5ec05d;clip-path:polygon(0 75%,20% 35%,44% 66%,62% 40%,100% 76%,100% 100%,0 100%);opacity:.92}.hill2{position:absolute;bottom:44px;width:120%;height:145px;background:#8bd763;clip-path:polygon(0 74%,17% 55%,36% 71%,53% 48%,77% 66%,100% 36%,100% 100%,0 100%)}.city{position:absolute;right:10px;bottom:100px;display:flex;gap:5px;align-items:flex-end}.building{width:28px;background:#6fbce4;border:2px solid rgba(47,101,139,.4);border-radius:4px 4px 0 0}.b1{height:55px}.b2{height:82px}.b3{height:64px}.house{position:absolute;right:94px;bottom:82px;width:34px;height:43px;background:#ffc755;border:2px solid #e08d27}.house:before{content:"";position:absolute;left:-5px;top:-13px;border-left:22px solid transparent;border-right:22px solid transparent;border-bottom:15px solid #f15b33}.warehouse{position:absolute;left:7px;bottom:74px;width:85px;height:62px;background:#c3c0a5;border:2px solid #807f70}.warehouse:before{content:"";position:absolute;left:-7px;top:-22px;border-left:50px solid transparent;border-right:50px solid transparent;border-bottom:26px solid #2f78c9}.door{position:absolute;left:22px;bottom:0;width:42px;height:35px;background:#536170;border-radius:4px 4px 0 0}.label{position:absolute;background:rgba(30,43,68,.82);color:white;padding:8px 13px;border-radius:7px;font-size:19px;font-weight:900;box-shadow:0 3px 9px rgba(0,0,0,.22)}.label.left{left:9px;bottom:80px}.label.right{right:34px;bottom:84px}.pin{position:absolute;right:29px;bottom:31px;width:42px;height:42px;background:#f85b35;border-radius:50% 50% 50% 0;transform:rotate(-45deg);border:3px solid #bd3728}.pin:after{content:"";position:absolute;width:16px;height:16px;background:#ffe9cd;border-radius:50%;left:10px;top:10px}.road{position:absolute;bottom:36px;left:-25px;width:120%;height:64px;background:#313c4f;transform:skewY(-4deg);border-top:4px solid rgba(255,255,255,.28)}.road:after{content:"";position:absolute;left:0;top:32px;width:100%;height:4px;background:repeating-linear-gradient(90deg,#e6e6e6 0 22px,transparent 22px 38px)}.bigTruck{position:absolute;left:145px;bottom:70px;width:170px;height:90px}.cargo{position:absolute;width:92px;height:58px;background:#f4f4e9;left:17px;top:20px;border:3px solid #263443;border-radius:4px}.cab{position:absolute;width:55px;height:50px;background:#f6f3e8;left:102px;top:28px;border:3px solid #263443;border-radius:7px 12px 5px 5px}.cab:before{content:"";position:absolute;width:24px;height:19px;background:#9bd9ff;left:6px;top:5px;border:2px solid #263443;border-radius:3px}.cab:after{content:"";position:absolute;width:11px;height:5px;background:#ff8d20;right:1px;bottom:10px;border-radius:2px}.bigTruck .w{position:absolute;width:28px;height:28px;border-radius:50%;background:#182231;border:6px solid #8d98a8;bottom:0}.w1{left:38px}.w2{left:120px}.dust{position:absolute;left:119px;bottom:74px;width:13px;height:13px;background:#f0efe5;border-radius:50%;box-shadow:-15px 4px 0 2px #f0efe5,-29px 8px 0 -1px #f0efe5}.panel{background:linear-gradient(#fffaf0,#fff3df);border:2px solid rgba(76,79,79,.18);border-radius:18px;box-shadow:0 4px 0 rgba(69,94,72,.2);padding:14px;margin:0 0 9px}.trip{text-align:center}.trip h3{margin:0 0 6px;font-size:25px}.route{display:grid;grid-template-columns:58px 1fr 58px;align-items:center;gap:10px}.roundBig{width:47px;height:47px;border-radius:50%;display:grid;place-items:center;color:white;font-weight:900;margin:auto}.blue{background:#2079db}.red{background:#f54e63}.iconHome{width:22px;height:18px;border:4px solid white;border-top:0;position:relative}.iconHome:before{content:"";position:absolute;left:-6px;top:-15px;border-left:15px solid transparent;border-right:15px solid transparent;border-bottom:15px solid white}.iconPin{width:20px;height:20px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:white}.route small{font-weight:900;color:#19345a}.bar{height:13px;border-radius:20px;background:#d7d2c8;box-shadow:inset 0 2px 4px rgba(0,0,0,.15);position:relative;overflow:visible}.fill{position:absolute;left:0;top:0;bottom:0;width:46%;background:#55c743;border-radius:20px}.miniMove{position:absolute;width:32px;height:23px;left:43%;top:-10px;background:#fdfcf6;border:2px solid #263443;border-radius:4px}.miniMove:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:#1d2735;bottom:-6px;left:5px;box-shadow:17px 0 0 #1d2735}.timerLbl{margin-top:8px;color:#6d6d6d;font-size:14px}.timer{font-size:34px;font-weight:900;letter-spacing:1px;color:#16375b}.reward{display:grid;grid-template-columns:1fr 134px;align-items:center;background:linear-gradient(#edffe0,#d6fac4)}.reward h3{margin:0 0 4px;color:#15642f;font-size:22px}.reward .amount{font-size:39px;color:#239243;font-weight:900}.btn{border:0;border-radius:16px;background:linear-gradient(#75d546,#37a621);color:white;font-size:24px;font-weight:900;height:62px;box-shadow:inset 0 -4px 0 rgba(0,0,0,.18),0 4px 0 #237a1e}.garage h3{font-size:24px;margin:0 0 12px}.garageHead{display:flex;align-items:center;justify-content:space-between}.buy{background:#2587e6;color:white;border:0;border-radius:10px;padding:8px 9px;font-weight:800;font-size:13px}.cars{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.slot{height:83px;border-radius:12px;background:#efe9dd;border:2px solid rgba(100,94,85,.2);position:relative;display:grid;place-items:center}.slot.active{border-color:#59bc50;background:#ecffe5}.slot .tiny{width:62px;height:43px;position:relative}.slot .tiny:before{content:"";position:absolute;width:36px;height:25px;left:4px;top:12px;background:#f7f3e8;border:2px solid #283342;border-radius:3px}.slot .tiny:after{content:"";position:absolute;width:20px;height:22px;left:40px;top:16px;background:#f7f3e8;border:2px solid #283342;border-radius:5px}.slot.blueTruck .tiny:before,.slot.blueTruck .tiny:after{background:#1681d8}.slot.yellowTruck .tiny:before,.slot.yellowTruck .tiny:after{background:#ffc126}.slot .lvl{position:absolute;left:6px;bottom:6px;background:#43a85a;color:#fff;padding:2px 5px;border-radius:5px;font-weight:900;font-size:12px}.lock{position:absolute;right:5px;bottom:4px;width:26px;height:26px;border-radius:50%;background:rgba(67,67,67,.55);color:#fff;display:grid;place-items:center}.add{font-size:46px;color:#8d8a85;border:2px dashed #beb8ae;background:#fff8e9}.bottom{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:min(430px,100vw);height:84px;background:linear-gradient(#18375d,#0f2949);display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:7px 12px 14px;box-shadow:0 -8px 24px rgba(0,0,0,.16);z-index:20}.nav{border-radius:16px;color:white;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-weight:800;opacity:.82}.nav.active{background:linear-gradient(#2385ed,#1162bc);box-shadow:inset 0 -3px 0 rgba(0,0,0,.18);opacity:1}.nav svg{width:27px;height:27px;fill:currentColor}.hidden{display:none}.toast{position:fixed;top:16px;left:50%;transform:translateX(-50%);background:#fff;color:#16335c;border-radius:14px;padding:10px 15px;box-shadow:0 8px 25px rgba(0,0,0,.2);font-weight:900;z-index:99;display:none}@media(max-height:780px){.scene{height:285px}.bigTruck{bottom:60px}.panel{padding:12px}.bottom{height:76px}.timer{font-size:28px}.app{padding-bottom:88px}.cars .slot{height:72px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2ea8ff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Cargo Rush" />
+  <title>Cargo Rush</title>
+  <style>
+    :root{--w:430px;--blue:#1f8fff;--nav:#0b315b;--green:#69c83d;--dark:#11233f;}
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html,body{margin:0;width:100%;min-height:100%;background:#000;font-family:Arial,Helvetica,sans-serif;overflow-x:hidden;color:#102342;}
+    body{display:flex;justify-content:center;align-items:flex-start;}
+    .app{position:relative;width:100%;max-width:var(--w);min-height:100vh;background:#8edcff;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.1)}
+    .bg{display:block;width:100%;height:auto;user-select:none;pointer-events:none;}
+    .safeTop{position:absolute;left:0;right:0;top:0;height:env(safe-area-inset-top);background:#2da3ff;}
+    .hud{position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none;}
+    .coinOverlay{position:absolute;right:112px;top:42px;width:98px;height:54px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;color:#14253d;pointer-events:none;}
+    .gemOverlay{position:absolute;right:17px;top:42px;width:86px;height:54px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:24px;color:#14253d;pointer-events:none;}
+    .timerBox{position:absolute;left:88px;right:88px;top:566px;text-align:center;font-weight:900;font-size:27px;color:#102342;letter-spacing:1px;text-shadow:0 2px 0 rgba(255,255,255,.65);}
+    .startPanel{position:absolute;left:24px;right:24px;top:639px;height:72px;display:flex;align-items:center;justify-content:space-between;pointer-events:auto;}
+    .rewardText{padding-left:30px;font-weight:900;font-size:28px;color:#2c9a50;text-shadow:0 2px 0 #fff;}
+    .btn{margin-left:auto;margin-right:3px;width:150px;height:48px;border:0;border-radius:15px;background:linear-gradient(#79dc46,#46b721);box-shadow:inset 0 2px rgba(255,255,255,.5),0 5px 0 #2b8518,0 8px 12px rgba(0,0,0,.25);font-weight:900;font-size:20px;color:white;text-shadow:0 2px rgba(0,0,0,.25);}
+    .btn:active{transform:translateY(4px);box-shadow:inset 0 2px rgba(255,255,255,.5),0 1px 0 #2b8518,0 3px 8px rgba(0,0,0,.25)}
+    .btn.go{background:linear-gradient(#73d8ff,#2394ff);box-shadow:inset 0 2px rgba(255,255,255,.5),0 5px 0 #1266bd,0 8px 12px rgba(0,0,0,.25)}
+    .progressFill{position:absolute;left:86px;right:auto;top:523px;height:10px;width:0;border-radius:20px;background:linear-gradient(90deg,#63c84a,#9be861);box-shadow:0 1px 3px rgba(0,0,0,.35);transition:width .4s linear;}
+    .truckDot{position:absolute;left:190px;top:502px;width:36px;height:30px;transition:left .4s linear;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25));}
+    .truckDot svg{width:100%;height:100%}
+    .tapZones button{position:absolute;background:transparent;border:0;color:transparent;pointer-events:auto;}
+    .tapGarage{left:13px;bottom:14px;width:110px;height:70px}.tapOrders{left:132px;bottom:14px;width:92px;height:70px}.tapShop{left:234px;bottom:14px;width:92px;height:70px}.tapTop{right:14px;bottom:14px;width:90px;height:70px}
+    .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(20px);max-width:330px;width:calc(100% - 44px);padding:13px 16px;border-radius:18px;background:rgba(13,45,84,.93);color:white;font-weight:800;text-align:center;opacity:0;transition:.25s;z-index:10;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:flex-end;justify-content:center;z-index:20}.modal.show{display:flex}.sheet{width:100%;max-width:430px;background:#fff5df;border-radius:26px 26px 0 0;padding:22px 18px 30px;border:4px solid #ffffff;box-shadow:0 -10px 35px rgba(0,0,0,.35);color:#14253d}.sheet h2{margin:0 0 14px;font-size:28px}.row{display:flex;justify-content:space-between;gap:12px;padding:13px 4px;border-bottom:1px solid rgba(0,0,0,.12);font-size:18px}.row b{font-size:20px}.close{width:100%;height:52px;margin-top:18px;border:0;border-radius:16px;background:linear-gradient(#4aa7ff,#156dd3);color:#fff;font-size:20px;font-weight:900;box-shadow:0 4px 0 #0b4c98}
+    @media (max-width:380px){.timerBox{top:528px;font-size:24px}.startPanel{top:595px}.progressFill{top:488px}.truckDot{top:467px}.coinOverlay{top:38px}.gemOverlay{top:38px}}
+  </style>
 </head>
 <body>
-<div class="app">
-  <div class="toast" id="toast">Рейс начался</div>
-  <div class="top">
-    <div class="pill"><div class="avatar"></div><div><div class="name">Player123</div><span class="lv">Lv. 1</span></div></div>
-    <div class="pill coin"><span class="roundIcon gold">$</span><span id="balance">0</span><span class="plus">+</span></div>
-    <div class="pill gem"><span class="roundIcon diamond"></span><span>0</span><span class="plus">+</span></div>
-    <div class="pill gear"><svg viewBox="0 0 24 24"><path d="M19.4 13.5c.1-.5.1-1 .1-1.5s0-1-.1-1.5l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L14 2h-4l-.4 2.5A7 7 0 0 0 7 6L4.6 5 2.6 8.5l2 1.5c-.1.5-.1 1-.1 1.5s0 1 .1 1.5l-2 1.5 2 3.5 2.4-1a7 7 0 0 0 2.6 1.5L10 22h4l.4-2.5A7 7 0 0 0 17 18l2.4 1 2-3.5-2-1.5ZM12 15.5A3.5 3.5 0 1 1 12 8a3.5 3.5 0 0 1 0 7.5Z"/></svg></div>
-  </div>
-
-  <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
-
-  <div class="truckCard">
-    <div class="truckInfo">
-      <div class="smallTruck"><span class="wheel"></span><span class="wheel2"></span></div>
-      <div><h2>Мини-фургон</h2><span class="badge">Lv. 1</span><div class="statLine">Доход за рейс</div><div style="font-weight:900;font-size:22px"><span style="color:#e89d17">●</span> 10</div></div>
+  <main class="app">
+    <img class="bg" src="assets/render_bg.png" alt="Cargo Rush" />
+    <div class="hud">
+      <div class="coinOverlay" id="coins">0</div>
+      <div class="gemOverlay" id="stars">0</div>
+      <div class="progressFill" id="fill"></div>
+      <div class="truckDot" id="dot"><svg viewBox="0 0 80 50"><rect x="8" y="18" width="44" height="22" rx="4" fill="#f5f5ef" stroke="#18324e" stroke-width="4"/><rect x="51" y="25" width="18" height="15" rx="3" fill="#f5f5ef" stroke="#18324e" stroke-width="4"/><circle cx="25" cy="43" r="6" fill="#18324e"/><circle cx="58" cy="43" r="6" fill="#18324e"/></svg></div>
+      <div class="timerBox" id="timer">00:30:00</div>
+      <div class="startPanel">
+        <div class="rewardText" id="reward">+10</div>
+        <button class="btn go" id="mainBtn">ПОЕХАЛИ</button>
+      </div>
+      <div class="tapZones">
+        <button class="tapGarage" data-modal="garage">garage</button>
+        <button class="tapOrders" data-modal="garage">orders</button>
+        <button class="tapShop" data-modal="shop">shop</button>
+        <button class="tapTop" data-modal="top">top</button>
+      </div>
     </div>
-    <button class="orderBtn" onclick="showToast('Заказы откроются позже')"><span class="clipboard"><i></i><i></i><i></i></span>Заказы<span class="note">2</span></button>
-  </div>
-
-  <div class="scene">
-    <div class="sun"></div><div class="hill"></div><div class="hill2"></div>
-    <div class="city"><div class="building b1"></div><div class="building b2"></div><div class="building b3"></div></div><div class="house"></div>
-    <div class="warehouse"><div class="door"></div></div><div class="label left">СКЛАД</div><div class="label right">ГОРОД</div><div class="pin"></div><div class="road"></div>
-    <div class="bigTruck"><div class="dust"></div><div class="cargo"></div><div class="cab"></div><span class="w w1"></span><span class="w w2"></span></div>
-  </div>
-
-  <section class="panel trip">
-    <h3 id="tripTitle">Машина стоит</h3>
-    <div class="route"><div><small>СКЛАД</small><div class="roundBig blue"><span class="iconHome"></span></div></div><div><div class="bar"><div class="fill" id="fill" style="width:0%"></div><div class="miniMove" id="miniMove" style="left:0%"></div></div><div class="timerLbl">Осталось времени:</div><div class="timer" id="timer">00:30:00</div></div><div><small>ГОРОД</small><div class="roundBig red"><span class="iconPin"></span></div></div></div>
-  </section>
-
-  <section class="panel reward">
-    <div><h3>Награда за рейс</h3><div class="amount"><span style="font-size:28px;color:#e1a31d">●</span> <span id="reward">10</span></div></div>
-    <button class="btn" id="mainBtn">ПОЕХАЛИ</button>
-  </section>
-
-  <section class="panel garage">
-    <div class="garageHead"><h3>Мой гараж</h3><button class="buy" onclick="showToast('Покупка машины будет в v0.2')">Купить машину +</button></div>
-    <div class="cars">
-      <div class="slot active"><div class="tiny"></div><div class="lvl">Lv. 1</div></div>
-      <div class="slot blueTruck"><div class="tiny"></div><div class="lvl">Lv. 5</div><div class="lock">⌂</div></div>
-      <div class="slot yellowTruck"><div class="tiny"></div><div class="lvl">Lv. 8</div><div class="lock">⌂</div></div>
-      <div class="slot add">+</div>
-    </div>
-  </section>
-
-  <nav class="bottom">
-    <div class="nav active"><svg viewBox="0 0 24 24"><path d="M4 11h16v9H4v-9Zm2-6h12l2 5H4l2-5Z"/></svg><span>Гараж</span></div>
-    <div class="nav"><svg viewBox="0 0 24 24"><path d="M7 2h10v3h3v17H4V5h3V2Zm2 2v3h6V4H9Zm-1 7h8v2H8v-2Zm0 4h8v2H8v-2Z"/></svg><span>Заказы</span></div>
-    <div class="nav"><svg viewBox="0 0 24 24"><path d="M4 10h16v11H4V10Zm1-6h14l1 5H4l1-5Zm4 8v9h6v-9H9Z"/></svg><span>Магазин</span></div>
-    <div class="nav"><svg viewBox="0 0 24 24"><path d="M7 3h10v3h3v3a5 5 0 0 1-5 5h-1v3h3v3H7v-3h3v-3H9a5 5 0 0 1-5-5V6h3V3Zm10 5V6h-1v5a3 3 0 0 0 3-3h-2ZM7 6H6v2a3 3 0 0 0 3 3V6H7Z"/></svg><span>Достижения</span></div>
-  </nav>
-</div>
+  </main>
+  <div class="toast" id="toast"></div>
+  <div class="modal" id="modal"><div class="sheet"><h2 id="mTitle"></h2><div id="mBody"></div><button class="close" id="close">ЗАКРЫТЬ</button></div></div>
 <script>
-const DURATION=30*60;let balance=Number(localStorage.getItem('cargo_balance')||0);let end=Number(localStorage.getItem('cargo_end')||0);let claimed=localStorage.getItem('cargo_claimed')==='1';
-const $=id=>document.getElementById(id);function fmt(s){s=Math.max(0,Math.floor(s));let h=String(Math.floor(s/3600)).padStart(2,'0'),m=String(Math.floor(s%3600/60)).padStart(2,'0'),sec=String(s%60).padStart(2,'0');return `${h}:${m}:${sec}`}
-function showToast(t){$('toast').textContent=t;$('toast').style.display='block';setTimeout(()=>$('toast').style.display='none',1300)}
-function save(){localStorage.setItem('cargo_balance',balance);localStorage.setItem('cargo_end',end);localStorage.setItem('cargo_claimed',claimed?'1':'0')}
-function render(){let now=Date.now();$('balance').textContent=balance.toLocaleString('ru-RU');let running=end>now,done=end&&end<=now&&!claimed;if(running){let left=(end-now)/1000,donePct=(1-left/DURATION)*100;$('tripTitle').textContent='Заказ в пути';$('timer').textContent=fmt(left);$('fill').style.width=Math.max(2,donePct)+'%';$('miniMove').style.left=Math.min(92,Math.max(0,donePct-4))+'%';$('mainBtn').textContent='В ПУТИ';$('mainBtn').disabled=true;$('mainBtn').style.opacity=.75}else if(done){$('tripTitle').textContent='Рейс завершён';$('timer').textContent='00:00:00';$('fill').style.width='100%';$('miniMove').style.left='92%';$('mainBtn').textContent='ЗАБРАТЬ';$('mainBtn').disabled=false;$('mainBtn').style.opacity=1}else{$('tripTitle').textContent='Машина стоит';$('timer').textContent='00:30:00';$('fill').style.width='0%';$('miniMove').style.left='0%';$('mainBtn').textContent='ПОЕХАЛИ';$('mainBtn').disabled=false;$('mainBtn').style.opacity=1}}
-$('mainBtn').onclick=()=>{let now=Date.now();if(end&&end<=now&&!claimed){balance+=10;claimed=true;end=0;save();showToast('+10 Cargo забрано');render();return}end=Date.now()+DURATION*1000;claimed=false;save();showToast('Машина поехала');render()};render();setInterval(render,1000);
+  const stateKey='cargo-rush-v03';
+  let s=JSON.parse(localStorage.getItem(stateKey)||'{}');
+  s.coins=s.coins||0; s.stars=s.stars||0; s.running=s.running||false; s.endsAt=s.endsAt||0; s.duration=s.duration||30*60; s.reward=s.reward||10;
+  const coins=document.getElementById('coins'), stars=document.getElementById('stars'), timer=document.getElementById('timer'), fill=document.getElementById('fill'), dot=document.getElementById('dot'), btn=document.getElementById('mainBtn'), reward=document.getElementById('reward');
+  function save(){localStorage.setItem(stateKey,JSON.stringify(s))}
+  function fmt(sec){sec=Math.max(0,Math.ceil(sec)); const h=String(Math.floor(sec/3600)).padStart(2,'0'), m=String(Math.floor(sec%3600/60)).padStart(2,'0'), x=String(sec%60).padStart(2,'0'); return h+':'+m+':'+x}
+  function render(){coins.textContent=s.coins.toLocaleString('ru-RU');stars.textContent=s.stars;reward.textContent='+'+s.reward;let now=Date.now(); if(s.running){let left=(s.endsAt-now)/1000; if(left<=0){timer.textContent='00:00:00'; fill.style.width='255px'; dot.style.left='285px'; btn.textContent='ЗАБРАТЬ'; btn.classList.remove('go');} else {timer.textContent=fmt(left); let p=1-left/s.duration; fill.style.width=(255*p)+'px'; dot.style.left=(190+95*p)+'px'; btn.textContent='В ПУТИ'; btn.classList.remove('go');}} else {timer.textContent=fmt(s.duration); fill.style.width='0px'; dot.style.left='190px'; btn.textContent='ПОЕХАЛИ'; btn.classList.add('go');}}
+  btn.onclick=()=>{let now=Date.now(); if(s.running && now>=s.endsAt){s.coins+=s.reward; s.running=false; s.endsAt=0; toast('Награда забрана: +'+s.reward+' Cargo'); save(); render(); return;} if(s.running){toast('Машина уже в пути'); return;} s.running=true; s.endsAt=Date.now()+s.duration*1000; toast('Рейс запущен'); save(); render();}
+  setInterval(render,1000); render();
+  function toast(t){const el=document.getElementById('toast');el.textContent=t;el.classList.add('show');clearTimeout(window.__to);window.__to=setTimeout(()=>el.classList.remove('show'),1700)}
+  const modal=document.getElementById('modal'), mt=document.getElementById('mTitle'), mb=document.getElementById('mBody'); document.getElementById('close').onclick=()=>modal.classList.remove('show');
+  document.querySelectorAll('[data-modal]').forEach(b=>b.onclick=()=>{let type=b.dataset.modal; if(type==='shop'){mt.textContent='Магазин';mb.innerHTML='<div class="row"><b>Mini Van</b><span>$10</span></div><div class="row"><b>Cargo Truck</b><span>$25</span></div><div class="row"><b>Heavy Truck</b><span>$100</span></div><div class="row"><b>Комиссия рынка</b><span>5%</span></div>';} else if(type==='top'){mt.textContent='Лидеры недели';mb.innerHTML='<div class="row"><b>RoadKing</b><span>248 500 Cargo</span></div><div class="row"><b>TruckBoss</b><span>201 900 Cargo</span></div><div class="row"><b>Azat</b><span>174 300 Cargo</span></div>';} else {mt.textContent='Гараж';mb.innerHTML='<div class="row"><b>Mini Van</b><span>Lv. 1</span></div><div class="row"><b>Рейс</b><span>30 минут</span></div><div class="row"><b>Награда</b><span>10 Cargo</span></div><div class="row"><b>Следующий слот</b><span>$5</span></div>';} modal.classList.add('show');});
 </script>
 </body>
 </html>
