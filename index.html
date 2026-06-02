@@ -7,7 +7,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="Cargo Rush" />
-<title>Cargo Rush v4.3</title>
+<title>Cargo Rush v4.4 stable button timer garage fix</title>
 <style>
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;width:100%;min-height:100%;background:#000;font-family:Arial,Helvetica,sans-serif;color:#112443;overflow-x:hidden}
@@ -107,6 +107,87 @@ body{display:flex;justify-content:center;align-items:flex-start}
   .carCard img{width:74px!important;height:54px!important;bottom:12px!important}
   .carCard:nth-child(1) img{width:80px!important;height:58px!important;bottom:10px!important}
   .buyBtn{top:12px!important;height:34px!important}
+}
+
+
+
+/* v4.4 targeted fix from stable v04_3:
+   - remove visual overlay button that duplicated background button
+   - make timer window smaller
+   - replace blue/yellow garage truck pictures with one aligned CSS truck shape in different colors
+*/
+.timer{
+  left:158px!important;
+  top:515px!important;
+  width:118px!important;
+  height:34px!important;
+  line-height:34px!important;
+  font-size:24px!important;
+  border-radius:11px!important;
+  box-shadow:0 0 0 3px #fff8eb!important;
+  z-index:7!important;
+}
+.btn{
+  opacity:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:transparent!important;
+  text-shadow:none!important;
+  right:25px!important;
+  top:574px!important;
+  width:166px!important;
+  height:66px!important;
+  z-index:12!important;
+}
+.btn:active{transform:none!important;box-shadow:none!important}
+.reward{display:none!important}
+.garageClean .carCard{height:88px!important;overflow:hidden!important}
+.garageClean .carCard img{display:none!important}
+.garageClean .carCard::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:20px;
+  transform:translateX(-50%);
+  width:72px;
+  height:42px;
+  background:
+    linear-gradient(var(--box,#f2eadb),var(--box,#f2eadb)) 0 7px/44px 26px no-repeat,
+    linear-gradient(var(--cab,#f7f4e8),var(--cab,#f7f4e8)) 43px 13px/25px 20px no-repeat,
+    linear-gradient(#9ed6f5,#9ed6f5) 50px 16px/11px 9px no-repeat,
+    linear-gradient(#1e2b39,#1e2b39) 4px 33px/63px 4px no-repeat;
+  border-radius:3px;
+  filter:drop-shadow(0 3px 2px rgba(0,0,0,.22));
+  z-index:1;
+}
+.garageClean .carCard::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:14px;
+  transform:translateX(-50%);
+  width:10px;
+  height:10px;
+  background:#263443;
+  border:3px solid #8c98a4;
+  border-radius:50%;
+  box-shadow:43px 0 0 #263443,43px 0 0 3px #8c98a4;
+  z-index:2;
+}
+.garageClean .carCard:nth-child(1){--cab:#f7f4e8;--box:#eee7d8}
+.garageClean .carCard:nth-child(2){--cab:#1888d8;--box:#2d93df}
+.garageClean .carCard:nth-child(3){--cab:#f5bd1b;--box:#f7cf3a}
+.garageClean .carCard .level{left:7px!important;bottom:5px!important;z-index:4!important}
+.garageClean .carCard .lock{right:5px!important;bottom:5px!important;z-index:4!important}
+@media(max-width:390px){
+  .timer{left:139px!important;top:470px!important;width:110px!important;height:31px!important;line-height:31px!important;font-size:22px!important}
+  .btn{top:526px!important;right:22px!important;width:150px!important;height:60px!important}
+  .garageClean .carCard::before{width:66px;height:39px;bottom:19px;background:
+    linear-gradient(var(--box,#f2eadb),var(--box,#f2eadb)) 0 7px/40px 24px no-repeat,
+    linear-gradient(var(--cab,#f7f4e8),var(--cab,#f7f4e8)) 39px 13px/23px 18px no-repeat,
+    linear-gradient(#9ed6f5,#9ed6f5) 45px 16px/10px 8px no-repeat,
+    linear-gradient(#1e2b39,#1e2b39) 4px 31px/58px 4px no-repeat}
+  .garageClean .carCard::after{bottom:13px;box-shadow:39px 0 0 #263443,39px 0 0 3px #8c98a4}
 }
 
 </style>
