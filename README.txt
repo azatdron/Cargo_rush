@@ -1,3 +1,2 @@
-Cargo Rush v04.8 Design Restore
-Base: v04.7 clean skeleton + restored v04 visual design.
-One visual layer only; no duplicated HTML overlays.
+Cargo Rush v04.11 Recovery Clean
+Single-file HTML. No external assets. Restores design after broken assets build; removes top Orders visual block.
