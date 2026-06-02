@@ -1,5 +1,6 @@
-Cargo Rush v0.6 Beautiful Stable
-- Вернул красивый стабильный дизайн.
-- Использована чистая однослойная визуальная база без дублей.
-- Добавлены рабочие зоны нажатия: Забрать, Купить машину, карточки гаража и нижнее меню.
-- Загружать в GitHub нужно index.html из архива.
+Cargo Rush v0.6.1 Beautiful Compact Spacing
+- Correct ZIP with real index.html.
+- Returned the beautiful visual design.
+- Slight compact vertical scaling so bottom navigation is visible.
+- Touch zones are included for reward, garage, buy button and bottom menu.
+- Upload index.html to GitHub root.
