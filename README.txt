@@ -1,2 +1,5 @@
-Cargo Rush v04.11.1 Garage Truck Fix
-Base: v04.11 Recovery Clean. Only garage image was rebuilt: same truck shape, recolored blue/yellow, clean badges and locks.
+Cargo Rush v0.6 Beautiful Stable
+- Вернул красивый стабильный дизайн.
+- Использована чистая однослойная визуальная база без дублей.
+- Добавлены рабочие зоны нажатия: Забрать, Купить машину, карточки гаража и нижнее меню.
+- Загружать в GitHub нужно index.html из архива.
