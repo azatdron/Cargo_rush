@@ -1,2 +1,2 @@
-Cargo Rush v04.14 Full Clean File
-Complete single-file HTML. Clean garage HTML block, no duplicate layers, clickable buttons.
+Cargo Rush v04.11.1 Garage Truck Fix
+Base: v04.11 Recovery Clean. Only garage image was rebuilt: same truck shape, recolored blue/yellow, clean badges and locks.
