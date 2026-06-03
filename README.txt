@@ -1,6 +1,6 @@
-Cargo Rush v0.6.1 Beautiful Compact Spacing
-- Correct ZIP with real index.html.
-- Returned the beautiful visual design.
-- Slight compact vertical scaling so bottom navigation is visible.
-- Touch zones are included for reward, garage, buy button and bottom menu.
-- Upload index.html to GitHub root.
+Cargo Rush v0.6.2 Top Compact Nav Visible
+- Based on v0.6.1 beautiful stable visual.
+- Slightly moved the visual screen upward.
+- Slightly compacted vertical scale so bottom navigation is more visible.
+- Kept the same design, colors, garage, trucks, and structure.
+- Adjusted tap zones for the new compact placement.
