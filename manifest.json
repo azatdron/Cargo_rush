@@ -1,13 +1,13 @@
 {
   "name": "Cargo Rush",
   "short_name": "Cargo Rush",
-  "start_url": "/",
+  "start_url": "/?v=087",
   "display": "standalone",
   "background_color": "#2ea8ff",
   "theme_color": "#2ea8ff",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "icon.png?v=087",
       "sizes": "512x512",
       "type": "image/png"
     }
